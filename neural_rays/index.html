@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ARX-Revolutions</title>
+    <style>
+        body {
+          margin: 0;
+          padding-left: 15px;
+          padding-top: 15px;
+        }
+
+
+        #canvas {
+          width: 800;
+          height: 800;
+        }
+
+        input {
+          width: 100px;
+        }
+
+      </style>
+
+  <body>
+    <div style="display:inline-block; vertical-align: top; width:850px">
+      <canvas id="canevas"></canvas>
+      <br>
+      <input id="ray1" type="number">
+      <input id="ray2" type="number">
+      <input id="ray3" type="number">
+      <input id="ray4" type="number">
+      <input id="ray5" type="number">
+
+      <input id="out1" type="number">
+      <input id="out2" type="number">
+    </div>
+    <div style="display:inline-block; vertical-align: top; width: 850px; height: 800px; background-color: black">
+
+      <div style="display: none">
+        <div id="disp1" style="display:inline-block; text-align: center; vertical-align: top; width: 03%; height: 800px; background-color: lime">
+        </div
+        ><div id="disp2" style="display:inline-block; text-align: center; vertical-align: top; width: 15%; height: 800px; background-color: magenta">
+        </div>
+
+        <div style="display:inline-block;"></div>
+        <div id="disp3" style="display:inline-block; text-align: center; vertical-align: top; width: 15%; height: 800px; background-color: yellow">
+        </div
+        ><div id="disp4" style="display:inline-block; text-align: center; vertical-align: top; width: 15%; height: 800px; background-color: magenta">
+        </div>
+
+        <div style="display:inline-block;"></div>
+        <div id="disp5" style="display:inline-block; text-align: center; vertical-align: top; width: 15%; height: 800px; background-color: yellow">
+        </div
+        ><div id="disp6" style="display:inline-block; text-align: center; vertical-align: top; width: 15%; height: 800px; background-color: magenta">
+        </div>
+
+        <div style="display:inline-block;"></div>
+        <div id="disp7" style="display:inline-block; text-align: center; vertical-align: top; width: 15%; height: 800px; background-color: cyan">
+        </div>
+      </div>
+
+
+      <div id="playersShowcase" style="display: hidden">
+
+
+      </div>
+
+      <div id="pantheon" style="height: 600px; width: 95%; overflow-y:scroll; background-color: gray; margin: 10px 10px 10px 10px;">
+      </div>
+
+
+      <div>
+
+        <button onclick="stop = 0; myanimate();">Start</button>
+        <button onclick="stop = 1;">End</button>
+        <!--<button onclick="init(); stop = 0;">Restart</button>-->
+        <input id="speed" type="number" min="1" value="4">
+
+        <input id="displaySeed" type="text" style="width: 300px;">
+
+        <input id="champText" type="text" style="width: 100px;">
+        <button onclick="dlChampWeights();">Dl champ</button>
+        <button onclick="replay();">SELECT</button>
+
+        <button onclick="players.forEach(item => {item.alive = false;});">KILL</button>
+
+        <input id="credit" type="number" min="10" value="1000" style="width:50px">
+        <input id="creditLeft" type="number" readonly style="width:50px">
+        <button onclick="credit();">CREDIT</button>
+
+        <input id="iteration" type="number" value="1" style="width:50px">
+        <input id="champScore" type="number" value="0" style="width:70px">
+        <input id="champEntropy" type="number" value="0" style="width:50px">
+
+        <input id="showPlayers" type="checkbox" checked="true" style="width:50px">
+        <input id="counter" type="number" value="0" style="width:50px">
+
+        <input id="time" type="text" style="width:60px; text-align:center">
+
+        <br><br>
+        <textarea id="weightsOutput" cols="80" rows="5"></textarea>
+      </div>
+
+      <br>
+    </div>
+
+
+
+    <script src="./neural.js"></script>
+    <script src="./cluster.js"></script>
+    <script src="./player.js"></script>
+    <script src="./terrain.js"></script>
+    <script src="./brain.js"></script>
+
+    <script src="./utilis.js"></script>
+    <script src="./math.js"></script>
+    <script src="./canevas.js"></script>
+    <script src="./controls.js"></script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Canvas-rayalism</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      input {
+        position: absolute;
+        height: 20px;
+        margin-top: 3px;
+      }
+      #helpLayer {
+        display: none;
+        position: fixed;
+        margin-left: 80%;
+
+        background-color: white;
+        width: 20%;
+        height: 100%;
+      }
+    </style>
+  <body>
+    <input type="submit" value="Download" id="dlButton" style="margin-left: 94px; width: 80px;" onclick="exp()"/>
+    <input type="file" id="fileToLoad" style="margin-left: 176px;" onchange="imp()"/>
+
+    <div id="helpLayer">
+      F12 inspect element<br>
+      Space hide/show overlay<br>
+      Escape hide/show help<br><br>
+
+      Right clic change mode<br>
+      Mode 0 view<br>
+      Mode 1 add polygon<br>
+      Mode 2 add rectangle<br>
+      Mode 3 add circle<br>
+      Mode 4 add line<br>
+      Mode 5 ray lightning<br><br>
+
+      Left clic input element<br>
+      (1) Middle clic simple/opti rays/single ray<br>
+      (4) Middle clic opti rays/linear rays/single ray<br>
+      (4) Left clic lock rays<br>
+      (4) Touche <strong>.</strong> change rays polygons mode<br><br>
+      (4) Touche <strong>,</strong> affiche source rays<br><br>
+      (4) Touche <strong>-</strong> change mode rays gradiants<br><br>
+
+      Maj modifier<br>
+      (1) Scroll change radius<br>
+      (2) Scroll change width<br>
+      (2) Maj scroll change height<br>
+      (4) Scroll add/remove rays<br>
+      (4) Maj scroll add/remove lots rays<br><br>
+
+      R,G,B,C,Y,P,W,L change element color<br>
+      Maj R,G,B... change border color<br><br>
+
+      1,2,3...0 change border size<br>
+      Maj 1,2,3... change border size +10<br>
+      (4) 1,2,3...0 change rays color<br>
+      (4) Maj 1,2,3...0 change rays poly color<br>
+      § delete element border<br>
+    </div>
+    <canvas id="canevas"></canvas>
+
+    <!--<script src="./forms.js"></script>-->
+    <script src="./cluster.js"></script>
+    <script src="./utilis.js"></script>
+    <script src="./canevas.js"></script>
+    <script src="./controls.js"></script>
+
+
+  </body>
+</html>
